@@ -1,0 +1,59 @@
+{
+	"ImportPath": "github.com/phonkee/classy",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v74",
+	"Deps": [
+		{
+			"ImportPath": "github.com/gopherjs/gopherjs/js",
+			"Rev": "00f306e07eaaaab04ea5dba605cd0e1eff9c6fb7"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.1-27-g757bef9",
+			"Rev": "757bef944d0f21880861c2dd9c871ca543023cba"
+		},
+		{
+			"ImportPath": "github.com/jtolds/gls",
+			"Comment": "v4.2.0",
+			"Rev": "8ddce2a84170772b95dd5d576c48d517b22cac63"
+		},
+		{
+			"ImportPath": "github.com/justinas/alice",
+			"Rev": "003d4fd794fd5bbe6b77c3b596e1fd9955f6c77e"
+		},
+		{
+			"ImportPath": "github.com/serenize/snaker",
+			"Rev": "8824b61eca66d308fcb2d515287d3d7a28dba8d6"
+		},
+		{
+			"ImportPath": "github.com/smartystreets/assertions",
+			"Comment": "1.6.0-10-g2063fd1",
+			"Rev": "2063fd1cc7c975db70502811a34b06ad034ccdf2"
+		},
+		{
+			"ImportPath": "github.com/smartystreets/assertions/internal/go-render/render",
+			"Comment": "1.6.0-10-g2063fd1",
+			"Rev": "2063fd1cc7c975db70502811a34b06ad034ccdf2"
+		},
+		{
+			"ImportPath": "github.com/smartystreets/assertions/internal/oglematchers",
+			"Comment": "1.6.0-10-g2063fd1",
+			"Rev": "2063fd1cc7c975db70502811a34b06ad034ccdf2"
+		},
+		{
+			"ImportPath": "github.com/smartystreets/goconvey/convey",
+			"Comment": "1.6.2-4-g4622128",
+			"Rev": "4622128e06c77c0174e17a7f0ed2db19a989b473"
+		},
+		{
+			"ImportPath": "github.com/smartystreets/goconvey/convey/gotest",
+			"Comment": "1.6.2-4-g4622128",
+			"Rev": "4622128e06c77c0174e17a7f0ed2db19a989b473"
+		},
+		{
+			"ImportPath": "github.com/smartystreets/goconvey/convey/reporting",
+			"Comment": "1.6.2-4-g4622128",
+			"Rev": "4622128e06c77c0174e17a7f0ed2db19a989b473"
+		}
+	]
+}
