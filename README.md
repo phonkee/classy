@@ -8,7 +8,8 @@ Class based views, inspired by django class based views. The functionality is si
     // enable debug for whole classy
     classy.Debug()
 
-    classy.Use(middleware1, middleware2).Name("api:{name}").Register(
+    // or enable for given registering
+    classy.Use(middleware1, middleware2).Debug().Name("api:{name}").Register(
         router,
         classy.New(&ProductDetailView{}).Use(middleware3),
         classy.New(&ProductApproveView{}).Path("/approve").Name("approve"),
