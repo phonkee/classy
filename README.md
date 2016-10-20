@@ -28,9 +28,9 @@ Class based views, inspired by django class based views. The functionality is si
     )
 
     // set response as not allowed (TODO)
-    notAllowed := response.New()
+    na := response.New(http.StatusMethodNotAllowed)
 
-    classy.Path("/api").MethodNotAllowed(notAllowed).Register(
+    classy.Path("/api").MethodNotAllowed(na).Register(
         router,
         classy.New(&ProductDetailView{}).Path("/product/"),
         classy.New(&ProductApproveView{}).Path("/product/approve").Debug(),
@@ -39,8 +39,8 @@ Class based views, inspired by django class based views. The functionality is si
     // method not allowed (TODO)
     classy.Path("/api").Register(
         router,
-        classy.New(&ProductDetailView{}).Path("/product/").MethodNotAllowed(notAllowed),
-        classy.New(&ProductApproveView{}).Path("/product/approve").Debug().MethodNotAllowed(notAllowed),
+        classy.New(&ProductDetailView{}).Path("/product/").MethodNotAllowed(na),
+        classy.New(&ProductApproveView{}).Path("/product/approve").Debug().MethodNotAllowed(na),
     )
 ```
 
