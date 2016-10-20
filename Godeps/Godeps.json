@@ -26,6 +26,14 @@
 			"Rev": "c286dcecd19ff979eeb73ea444e479b903f2cfcb"
 		},
 		{
+			"ImportPath": "github.com/phonkee/logger",
+			"Rev": "5de77407c856eb6b7cf466bb4856113a8bd6aabc"
+		},
+		{
+			"ImportPath": "github.com/phonkee/response",
+			"Rev": "eae802a1391c996a2d40acc02d7aa6c114f8d6fd"
+		},
+		{
 			"ImportPath": "github.com/serenize/snaker",
 			"Rev": "8824b61eca66d308fcb2d515287d3d7a28dba8d6"
 		},
