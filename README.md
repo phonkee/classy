@@ -22,6 +22,7 @@ Class based views, inspired by django class based views. The functionality is si
         classy.New(&ProductApproveView{}).Path("/product/approve").Debug(),
     )
 
+    // or provide path for all registered classy views `api`
     classy.Path("/api").Register(
         router,
         classy.New(&ProductDetailView{}).Path("/product/"),
