@@ -1,6 +1,7 @@
 # Classy
 
 Class based views, inspired by django class based views. The functionality is simple yet powerful.
+Have in mind that only one instance of view exists so you can be sure that your views are goroutine safe. 
 
 ## API
 
