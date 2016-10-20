@@ -4,6 +4,7 @@ Class based views, inspired by django class based views. The functionality is si
 
 ## API
 
+```golang
     classy.Debug()
 
     classy.Use(middleware1, middleware2).Name("api:{name}").Register(
@@ -38,9 +39,11 @@ Class based views, inspired by django class based views. The functionality is si
         classy.New(&ProductDetailView{}).Path("/product/").MethodNotAllowed(notAllowed),
         classy.New(&ProductApproveView{}).Path("/product/approve").Debug().MethodNotAllowed(notAllowed),
     )
+```
 
 Every view needs to have Routes method that returns mapping:
 
+```golang
     func (l View) Routes() map[string]Mapping {
         return map[string]Mapping {
             "/": NewMapping(
@@ -49,11 +52,14 @@ Every view needs to have Routes method that returns mapping:
             )
         }
     }
+```
 
 If you embed multiple views you can use shorthand to merge routes:
 
+```golang
     return MultiRoutes().
         Add(Detail.Routes(), "{name}_detail").
         Add(List.Routes(), "{name}_list").
         Get()
+```
     
