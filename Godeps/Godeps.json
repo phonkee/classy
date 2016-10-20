@@ -22,6 +22,10 @@
 			"Rev": "003d4fd794fd5bbe6b77c3b596e1fd9955f6c77e"
 		},
 		{
+			"ImportPath": "github.com/mgutz/ansi",
+			"Rev": "c286dcecd19ff979eeb73ea444e479b903f2cfcb"
+		},
+		{
 			"ImportPath": "github.com/serenize/snaker",
 			"Rev": "8824b61eca66d308fcb2d515287d3d7a28dba8d6"
 		},

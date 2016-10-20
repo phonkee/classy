@@ -8,14 +8,16 @@ import (
 	"reflect"
 	"runtime"
 
-	"github.com/gorilla/mux"
-	"github.com/justinas/alice"
+	"github.com/phonkee/response"
 )
 
 var (
 	// List of available (supported) http methods. You can extend this with new methods
-	AVAILABLE_METHODS = []Method{"GET", "POST", "PUT", "PATCH", "OPTIONS", "TRACE", "HEAD"}
+	AVAILABLE_METHODS = []string{"GET", "POST", "PUT", "PATCH", "OPTIONS", "TRACE", "HEAD"}
 )
+
+// Before func is called before any view is called. If Response is returned it's written and stopped execution
+type BeforeFunc func(w http.ResponseWriter, r *http.Request) response.Response
 
 /*
 View
@@ -23,19 +25,10 @@ View
 Interface for ClassyView, structs will be so-called class based view.
 */
 type Viewer interface {
-	Before(w http.ResponseWriter, r *http.Request) error
+	Before(w http.ResponseWriter, r *http.Request) response.Response
 
 	// Return used route map.
-	GetRoutes() Routes
-}
-
-/*
-Classy is struct that wraps classy view and can register views to gorilla mux
-*/
-type Classy interface {
-	Register(*mux.Router, ...string) []*mux.Route
-
-	Use(middlewares ...alice.Constructor) Classy
+	Routes() map[string]Mapping
 }
 
 /*
