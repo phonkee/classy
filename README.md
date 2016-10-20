@@ -5,6 +5,7 @@ Class based views, inspired by django class based views. The functionality is si
 ## API
 
 ```go
+    // enable debug for whole classy
     classy.Debug()
 
     classy.Use(middleware1, middleware2).Name("api:{name}").Register(
@@ -13,6 +14,7 @@ Class based views, inspired by django class based views. The functionality is si
         classy.New(&ProductApproveView{}).Path("/approve").Name("approve"),
     )
 
+    // lets register some views
     classy.Register(
         router,
         classy.New(&ProductDetailView{}).Path("/product/"),
@@ -25,7 +27,7 @@ Class based views, inspired by django class based views. The functionality is si
         classy.New(&ProductApproveView{}).Path("/product/approve").Debug(),
     )
 
-    // set response as not allowed
+    // set response as not allowed (TODO)
     notAllowed := response.New()
 
     classy.Path("/api").MethodNotAllowed(notAllowed).Register(
@@ -34,6 +36,7 @@ Class based views, inspired by django class based views. The functionality is si
         classy.New(&ProductApproveView{}).Path("/product/approve").Debug(),
     )
 
+    // method not allowed (TODO)
     classy.Path("/api").Register(
         router,
         classy.New(&ProductDetailView{}).Path("/product/").MethodNotAllowed(notAllowed),
