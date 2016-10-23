@@ -129,8 +129,8 @@ Routes returns combination of list and detail routes
 */
 func (v ViewSet) Routes() (result map[string]Mapping) {
 	return JoinRoutes().
-		Add(v.DetailView.Routes(), "{name}_detail").
-		Add(v.ListView.Routes(), "{name}_list").
+		Add(v.DetailView.Routes(), "{name}_detail", []string{"Metadata", "MetadataDetail"}).
+		Add(v.ListView.Routes(), "{name}_list", []string{"Metadata", "MetadataList"}).
 		Get()
 }
 
