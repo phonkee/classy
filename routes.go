@@ -20,7 +20,7 @@ type multiroute struct {
 func (m multiroute) Add(route map[string]Mapping, name string, aliases ...[]string) multiroute {
 	for k, v := range route {
 
-		m.m[k] = v.Name(name).Rename()
+		m.m[k] = v.Name(name)
 
 		for _, alias := range aliases {
 			if len(alias) != 2 {
