@@ -149,7 +149,7 @@ func (v SlugViewSet) Before(w http.ResponseWriter, r *http.Request) error {
 /*
 Routes returns combination of list and detail routes
 */
-func (v SlugViewSet) Routes() (result map[string]Mapping) {
+func (v SlugViewSet) Routes() map[string]Mapping {
 	return JoinRoutes().
 		Add(v.SlugDetailView.Routes(), "{{name}}_detail").
 		Add(v.ListView.Routes(), "{{name}}_list").

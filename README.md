@@ -63,7 +63,7 @@ Every view needs to have Routes method that returns mapping:
 If you embed multiple views you can use shorthand to merge routes:
 
 ```go
-    return MultiRoutes().
+    return JoinRoutes().
         Add(Detail.Routes(), "{name}_detail").
         Add(List.Routes(), "{name}_list").
         Get()
