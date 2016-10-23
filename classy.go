@@ -10,7 +10,7 @@ import (
 	"fmt"
 
 	"github.com/justinas/alice"
-	"github.com/phonkee/response"
+	"github.com/phonkee/go-response"
 )
 
 // support for custom http handlers that return response.Response

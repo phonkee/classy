@@ -1,6 +1,6 @@
 package classy
 
-import "github.com/phonkee/logger"
+import "github.com/phonkee/go-logger"
 
 var (
 	loggerInfo    = logger.Info("classy")

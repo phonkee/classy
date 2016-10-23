@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/phonkee/response"
+	"github.com/phonkee/go-response"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"runtime"
 
-	"github.com/phonkee/response"
+	"github.com/phonkee/go-response"
 )
 
 var (

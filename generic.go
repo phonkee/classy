@@ -3,7 +3,7 @@ package classy
 import (
 	"net/http"
 
-	"github.com/phonkee/response"
+	"github.com/phonkee/go-response"
 )
 
 /*
