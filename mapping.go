@@ -19,6 +19,9 @@ type Mapping interface {
 
 	// returns name
 	GetName() string
+
+	// Renames field
+	Rename(from, to string) Mapping
 }
 
 /*
@@ -143,5 +146,19 @@ func (m mapping) GetName() string {
 
 func (m mapping) Name(name string) Mapping {
 	m.name = name
+	return m
+}
+
+func (m mapping) Rename(from, to string) Mapping {
+
+	for http, structmethods := range m.dispatcher {
+
+		for i, sm := range structmethods {
+			if sm == from {
+				m.dispatcher[http][i] = to
+			}
+		}
+	}
+
 	return m
 }
