@@ -13,7 +13,7 @@ import (
 
 var (
 	// List of available (supported) http methods. You can extend this with new methods
-	AVAILABLE_METHODS = []string{"GET", "POST", "PUT", "PATCH", "OPTIONS", "TRACE", "HEAD"}
+	AVAILABLE_METHODS = []string{"GET", "POST", "PUT", "PATCH", "OPTIONS", "TRACE", "HEAD", "DELETE"}
 )
 
 // Before func is called before any view is called. If Response is returned it's written and stopped execution
