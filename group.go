@@ -12,7 +12,7 @@ Group creates new group of multiple classy views
 func Group(path string, views ...Classy) (result Classy) {
 	result = group{
 		chain: alice.New(),
-		views: []Classy{},
+		views: views,
 	}
 	result = result.Path(path)
 
