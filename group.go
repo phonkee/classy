@@ -97,7 +97,7 @@ func (g group) getBoundMethods() (result []BoundMethod) {
 
 			// add name if available
 			if g.name != "" {
-				vbm.Name = makeName(g.name, vbm.GetName())
+				vbm.Name = makeName(g.name, vbm.Name)
 			}
 
 			// add path if set
