@@ -105,6 +105,9 @@ func (g group) getBoundMethods() (result []BoundMethod) {
 				vbm.Path = g.path + vbm.Path
 			}
 
+			// add group middlewares
+			vbm.Handlerfunc = g.chain.ThenFunc(vbm.Handlerfunc).ServeHTTP
+
 			result = append(result, vbm)
 		}
 	}
