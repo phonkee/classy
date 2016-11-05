@@ -10,7 +10,6 @@ import (
 	"fmt"
 
 	"github.com/justinas/alice"
-	"github.com/phonkee/go-response"
 )
 
 // support for custom http handlers that return response.Response
@@ -29,6 +28,9 @@ type Classy interface {
 
 	// Name sets name of given classy view (route will be registered under this name)
 	Name(name string) Classy
+
+	// GetName returns name
+	GetName() string
 
 	// Path sets path (optional)
 	Path(path string) Classy
@@ -204,6 +206,13 @@ Name sets name of classy view
 func (c classy) Name(name string) Classy {
 	c.name = strings.TrimSpace(name)
 	return c
+}
+
+/*
+GetName returns name of classy view
+*/
+func (c classy) GetName() string {
+	return c.name
 }
 
 /*
