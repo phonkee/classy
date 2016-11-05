@@ -39,6 +39,17 @@ Have in mind that only one instance of view exists so you need to be be sure tha
         classy.New(&ProductApproveView{}).Path("/product/approve").Debug(),
     )
 
+    // support for Gropus
+    classy.Path("/api").Register(
+        router,
+        classy.Group(
+            "/product",
+            classy.New(&ProductDetailView{}),
+            classy.New(&ProductApproveView{}).Path("/approve").Debug(),
+        ),
+    )
+    
+
     // method not allowed (TODO)
     classy.Path("/api").Register(
         router,
