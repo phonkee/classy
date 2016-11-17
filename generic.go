@@ -142,7 +142,7 @@ type SlugViewSet struct {
 /*
 Before is blank implementation for ViewSet
 */
-func (v SlugViewSet) Before(w http.ResponseWriter, r *http.Request) error {
+func (v SlugViewSet) Before(w http.ResponseWriter, r *http.Request) response.Response {
 	return nil
 }
 
