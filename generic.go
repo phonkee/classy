@@ -151,7 +151,7 @@ Routes returns combination of list and detail routes
 */
 func (v SlugViewSet) Routes() map[string]Mapping {
 	return JoinRoutes().
-		Add(v.SlugDetailView.Routes(), "{{name}}_detail").
-		Add(v.ListView.Routes(), "{{name}}_list").
+		Add(v.SlugDetailView.Routes(), "{name}_detail").
+		Add(v.ListView.Routes(), "{name}_list").
 		Get()
 }
